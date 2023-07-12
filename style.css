@@ -17,6 +17,12 @@
     src: url('fonte/Jujutsu\ Kaisen.ttf') format('truetype');
 }
 
+@media screen and (max-widht: 768px) {
+    img {
+        margin-top: 160px;
+    }
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -82,7 +88,6 @@ nav > ul > li > a:hover {
 
 .invisible {
     width: 250px;
-    margin: -100px;
     pointer-events: none;
 }
 
@@ -96,6 +101,7 @@ a {
 
 main {
     display: flex;
+    flex: 1 1 200px;
     flex-direction: column;
     max-width: 48em;
     padding: 20px;
@@ -141,11 +147,18 @@ main > h1 {
 
 .trailer {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 31.5em;
+    position: relative;
 }
+
+img {
+    max-height: 200px;
+    max-width: 200px;
+    display: block;
+    
+}
+
 
 article {
     
@@ -157,14 +170,6 @@ iframe {
     
 }
 
-.gogin {
-    height: 11.875em;
-    width: 11.875em;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    
-}
 
 .trama {
     margin-bottom: 30px;
