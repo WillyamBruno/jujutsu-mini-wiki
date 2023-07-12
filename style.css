@@ -12,12 +12,20 @@
     src: url('fonte/Rubik-VariableFont_wght.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'jujutsu3';
+    src: url('fonte/Jujutsu\ Kaisen.ttf') format('truetype');
+}
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     text-align: justify;
     font-family:'jujutsu2';
     color: rgb(41, 41, 41);
@@ -26,7 +34,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: darkred;
-    
+    background-attachment: fixed;
 }
 
 hr {
@@ -35,7 +43,7 @@ hr {
 }
 
 header {
-    width: 100%;
+    max-width: 65.625em;
     padding: 3%;
 }
 
@@ -74,6 +82,8 @@ nav > ul > li > a:hover {
 
 .invisible {
     width: 250px;
+    margin: -100px;
+    pointer-events: none;
 }
 
 a {
@@ -87,7 +97,7 @@ a {
 main {
     display: flex;
     flex-direction: column;
-    width: 750px;
+    max-width: 48em;
     padding: 20px;
     background-color: white;
     margin: 10px auto auto auto;
@@ -97,6 +107,7 @@ main {
 
 .p1 > a {
     color: red;
+    transition: all 0.4s;
 }
 
 .p1 > a:hover {
@@ -107,16 +118,20 @@ main {
 }
 
 .p1 {
+    height: 14em;
     width: 16em;
     margin-right: 20px;
     font-size: 0.95em;
-    
 }
 
 .p2 {
     margin-bottom: 25px;
     font-size: 0.95em;
     margin: 10px
+}
+
+.p1 , .p2 {
+    text-indent: 30px;
 }
 
 main > h1 {
@@ -128,8 +143,12 @@ main > h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    height: 12.5em;
+    justify-content: space-between;
+    height: 31.5em;
+}
+
+article {
+    
 }
 
 iframe {
@@ -138,23 +157,12 @@ iframe {
     
 }
 
-.paigogin {
-    height: 7em;
-    width: 15em;
-    display: grid;
-    place-items: center;    
-}
-
 .gogin {
-    height: 6.25em;
-    width: 6.25em;
-}
-
-
-.gogin > img {
-    width: 6.25em;
-    height: 6.25em;
-    
+    height: 11.875em;
+    width: 11.875em;
+    background-size: cover;
+    background-position: center;
+    position: relative;
     
 }
 
@@ -162,9 +170,6 @@ iframe {
     margin-bottom: 30px;
 }
 
-.container0 {
-    display: flex;
-}
 
 .container1 {
     position: relative;
@@ -200,13 +205,55 @@ iframe {
     border-radius: 50%;
     background-size: cover;
     opacity: 0.5;
-    z-index: 1;
+    z-index: 3;
     transition: 0.2s;
+    pointer-events: none;
 }
 
 .container1 .box:hover::before {
     opacity: 0;
     transition: 0.2s;
+}
+
+.personas {
+    background: inherit;
+    height: 200px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 9.375em 1fr;
+    grid-template-rows: 1fr 6.25em 1fr;
+    place-items: center;
+    position: relative;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.name {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 3;
+    width: 9.375em;
+    height: 1.5em;
+    font-family: 'jujutsu3';
+    font-size: 1.635em;
+    font-weight: bold;
+    background: linear-gradient(to bottom, rgb(90, 0, 0), rgb(199, 0, 0),red);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+
+.name::before {
+    content: attr(data-text);
+    position: absolute;
+    z-index: -1;
+    font-size: 1.03em;
+    color: black;
+    text-shadow: 2px 2px 3px black;
 }
 
 footer {
