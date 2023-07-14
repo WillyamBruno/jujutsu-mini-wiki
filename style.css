@@ -17,9 +17,27 @@
     src: url('fonte/Jujutsu\ Kaisen.ttf') format('truetype');
 }
 
-@media screen and (max-widht: 768px) {
+@media (max-width: 35.563em) {
+    .gogin {
+        display: none;
+    }
+}
+
+@media (max-width: 35.563em) {
+    .invisible {
+        display: none;
+    }
+
     img {
-        margin-top: 160px;
+        margin-top: 20px;
+    }
+
+    header ul li {
+        margin: 0% 1em;
+    }
+
+    .p1 {
+        height: 6em;
     }
 }
 
@@ -29,7 +47,6 @@
 }
 
 body {
-    max-width: 768px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -44,14 +61,14 @@ body {
     background-attachment: fixed;
 }
 
-hr {
-    margin-top: 10px;
+.line {
+    margin-top: 5px;
     margin-bottom: 20px;
+    border: 0.01em solid black;
 }
 
 header {
-    max-width: 65.625em;
-    padding: 3%;
+    /* max-width: 65.625em; */
 }
 
 header  ul {
@@ -60,7 +77,6 @@ header  ul {
 
 header  ul  li {
     display: inline-block;
-    margin: 0% 40px;
     padding-top: 20px;
 }
 
@@ -108,7 +124,7 @@ main {
     padding: 20px;
     background-color: white;
     margin: 10px auto auto auto;
-    border-radius: 7px 7px 0px 0px;
+    /* border-radius: 7px 7px 0px 0px; */
     box-shadow: 0px 0px 100px rgb(0, 0, 0);
 }
 
@@ -125,9 +141,7 @@ main {
 }
 
 .p1 {
-    height: 14em;
-    width: 16em;
-    margin-right: 20px;
+    /* width: 16em; */
     font-size: 0.95em;
 }
 
@@ -153,8 +167,13 @@ main > h1 {
     position: relative;
 }
 
+.gogin {
+    margin-top: -160px;
+}
+
+
 img {
-    max-height: 200px;
+    max-height: 100px;
     max-width: 200px;
     display: block;
     
@@ -263,7 +282,6 @@ iframe {
 }
 
 footer {
-
     background-color: black;
     padding: 0.8em;
 }
