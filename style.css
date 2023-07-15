@@ -53,12 +53,8 @@ body {
     text-align: justify;
     font-family:'jujutsu2';
     color: rgb(41, 41, 41);
-    background-image: url('imagens/background.jpg');
-    background-position: bottom center;
+    background-color: darkred url('imagens/background.jpg') bottom center no-repeat fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: darkred;
-    background-attachment: fixed;
 }
 
 .line {
